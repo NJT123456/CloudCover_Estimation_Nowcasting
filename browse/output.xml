@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.10.10 on win32)" generated="20230621 01:04:02.756" rpa="false" schemaversion="4">
+<suite id="s1" name="Browsandestimate" source="c:\Users\USER\Desktop\SourceCode_No61_CloudCover_Estimation_Nowcasting\WebApplication_CloudCoverEstimate_Nowcasting\test\browse\browsandestimate.robot">
+<kw name="Open Browser to test" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${ESTIMATE URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230621 01:04:03.792" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8000//estimate'.</msg>
+<msg timestamp="20230621 01:04:03.872" level="INFO">Executing: C:\Users\USER\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230621 01:04:03.788" endtime="20230621 01:04:06.288"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230621 01:04:06.290" endtime="20230621 01:04:06.435"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230621 01:04:06.436" endtime="20230621 01:04:06.439"/>
+</kw>
+<status status="PASS" starttime="20230621 01:04:03.783" endtime="20230621 01:04:06.440"/>
+</kw>
+<test id="s1-t1" name="Choose true picture" line="14">
+<kw name="Select true Picture">
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>id=image</arg>
+<arg>C://Users//USER//Desktop//SourceCode_No61_CloudCover_Estimation_Nowcasting//WebApplication_CloudCoverEstimate_Nowcasting//picture test//2021_11_16__11_16_20_HDR.jpg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20230621 01:04:06.456" level="INFO">Sending C:\Users\USER\Desktop\SourceCode_No61_CloudCover_Estimation_Nowcasting\WebApplication_CloudCoverEstimate_Nowcasting\picture test\2021_11_16__11_16_20_HDR.jpg to browser.</msg>
+<status status="PASS" starttime="20230621 01:04:06.449" endtime="20230621 01:04:08.535"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=predict</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230621 01:04:08.544" level="INFO">Clicking button 'id=predict'.</msg>
+<status status="PASS" starttime="20230621 01:04:08.538" endtime="20230621 01:04:21.262"/>
+</kw>
+<status status="PASS" starttime="20230621 01:04:06.445" endtime="20230621 01:04:21.263"/>
+</kw>
+<status status="PASS" starttime="20230621 01:04:06.440" endtime="20230621 01:04:21.265"/>
+</test>
+<test id="s1-t2" name="Choose fail picture" line="17">
+<kw name="Select fail Picture">
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>id=image</arg>
+<arg>C://Users//USER//Desktop//SourceCode_No61_CloudCover_Estimation_Nowcasting//WebApplication_CloudCoverEstimate_Nowcasting//picture test//2021_11_16__11_15_59_HDR_cropped.jpg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20230621 01:04:21.277" level="INFO">Sending C:\Users\USER\Desktop\SourceCode_No61_CloudCover_Estimation_Nowcasting\WebApplication_CloudCoverEstimate_Nowcasting\picture test\2021_11_16__11_15_59_HDR_cropped.jpg to browser.</msg>
+<status status="PASS" starttime="20230621 01:04:21.274" endtime="20230621 01:04:23.321"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=predict</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230621 01:04:23.325" level="INFO">Clicking button 'id=predict'.</msg>
+<status status="PASS" starttime="20230621 01:04:23.322" endtime="20230621 01:04:28.693"/>
+</kw>
+<status status="PASS" starttime="20230621 01:04:21.273" endtime="20230621 01:04:28.695"/>
+</kw>
+<status status="PASS" starttime="20230621 01:04:21.269" endtime="20230621 01:04:28.703"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230621 01:04:28.715" endtime="20230621 01:04:31.840"/>
+</kw>
+<status status="PASS" starttime="20230621 01:04:02.777" endtime="20230621 01:04:31.841"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Browsandestimate">Browsandestimate</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.10.10 on win32)" generated="20230621 01:02:10.328" rpa="false" schemaversion="4">
+<suite id="s1" name="Login" source="c:\Users\USER\Desktop\SourceCode_No61_CloudCover_Estimation_Nowcasting\WebApplication_CloudCoverEstimate_Nowcasting\test\login\login.robot">
+<kw name="Open Browser To Welcome to Cloud Cover Nowcasting" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230621 01:02:11.501" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8000/'.</msg>
+<msg timestamp="20230621 01:02:11.533" level="INFO">Executing: C:\Users\USER\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230621 01:02:11.497" endtime="20230621 01:02:14.141"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230621 01:02:14.144" endtime="20230621 01:02:14.325"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230621 01:02:14.327" endtime="20230621 01:02:14.330"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:11.490" endtime="20230621 01:02:14.330"/>
+</kw>
+<test id="s1-t1" name="Login Test valid user and invalid password" line="16">
+<kw name="Input Username">
+<arg>admin</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230621 01:02:14.348" level="INFO">Typing text 'admin' into text field 'username'.</msg>
+<status status="PASS" starttime="20230621 01:02:14.341" endtime="20230621 01:02:17.590"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:14.339" endtime="20230621 01:02:17.591"/>
+</kw>
+<kw name="Input Password">
+<arg>1234</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230621 01:02:17.602" level="INFO">Typing text '1234' into text field 'password'.</msg>
+<status status="PASS" starttime="20230621 01:02:17.597" endtime="20230621 01:02:20.768"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:17.594" endtime="20230621 01:02:20.769"/>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=forecc</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230621 01:02:20.775" level="INFO">Clicking button 'id=forecc'.</msg>
+<status status="PASS" starttime="20230621 01:02:20.772" endtime="20230621 01:02:26.195"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:20.770" endtime="20230621 01:02:26.196"/>
+</kw>
+<kw name="Welcome Page Should Be Open">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Cloud Cover Nowcasting</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230621 01:02:26.200" endtime="20230621 01:02:27.225"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Cloud Cover Nowcasting</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230621 01:02:28.262" level="INFO">Page title is 'Cloud Cover Nowcasting'.</msg>
+<status status="PASS" starttime="20230621 01:02:27.227" endtime="20230621 01:02:28.262"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:26.198" endtime="20230621 01:02:28.264"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:14.333" endtime="20230621 01:02:28.267"/>
+</test>
+<test id="s1-t2" name="Login Test invalid user and valid password" line="22">
+<kw name="Input Username">
+<arg>tester</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230621 01:02:28.288" level="INFO">Typing text 'tester' into text field 'username'.</msg>
+<status status="PASS" starttime="20230621 01:02:28.284" endtime="20230621 01:02:31.413"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:28.282" endtime="20230621 01:02:31.414"/>
+</kw>
+<kw name="Input Password">
+<arg>123</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230621 01:02:31.421" level="INFO">Typing text '123' into text field 'password'.</msg>
+<status status="PASS" starttime="20230621 01:02:31.419" endtime="20230621 01:02:34.563"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:31.416" endtime="20230621 01:02:34.564"/>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=forecc</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230621 01:02:34.573" level="INFO">Clicking button 'id=forecc'.</msg>
+<status status="PASS" starttime="20230621 01:02:34.570" endtime="20230621 01:02:40.477"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:34.566" endtime="20230621 01:02:40.478"/>
+</kw>
+<kw name="Welcome Page Should Be Open">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Cloud Cover Nowcasting</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230621 01:02:40.482" endtime="20230621 01:02:41.503"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Cloud Cover Nowcasting</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230621 01:02:42.519" level="INFO">Page title is 'Cloud Cover Nowcasting'.</msg>
+<status status="PASS" starttime="20230621 01:02:41.504" endtime="20230621 01:02:42.520"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:40.480" endtime="20230621 01:02:42.521"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:28.275" endtime="20230621 01:02:42.523"/>
+</test>
+<test id="s1-t3" name="Login Test invalid user and invalid password" line="28">
+<kw name="Input Username">
+<arg>tester</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230621 01:02:42.542" level="INFO">Typing text 'tester' into text field 'username'.</msg>
+<status status="PASS" starttime="20230621 01:02:42.538" endtime="20230621 01:02:45.675"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:42.535" endtime="20230621 01:02:45.677"/>
+</kw>
+<kw name="Input Password">
+<arg>1234</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230621 01:02:45.684" level="INFO">Typing text '1234' into text field 'password'.</msg>
+<status status="PASS" starttime="20230621 01:02:45.681" endtime="20230621 01:02:48.781"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:45.679" endtime="20230621 01:02:48.782"/>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=forecc</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230621 01:02:48.790" level="INFO">Clicking button 'id=forecc'.</msg>
+<status status="PASS" starttime="20230621 01:02:48.787" endtime="20230621 01:02:54.167"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:48.784" endtime="20230621 01:02:54.168"/>
+</kw>
+<kw name="Welcome Page Should Be Open">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Cloud Cover Nowcasting</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230621 01:02:54.172" endtime="20230621 01:02:55.201"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Cloud Cover Nowcasting</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230621 01:02:56.221" level="INFO">Page title is 'Cloud Cover Nowcasting'.</msg>
+<status status="PASS" starttime="20230621 01:02:55.202" endtime="20230621 01:02:56.222"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:54.171" endtime="20230621 01:02:56.223"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:42.530" endtime="20230621 01:02:56.224"/>
+</test>
+<test id="s1-t4" name="Login Test valid user and valid password" line="34">
+<kw name="Input Username">
+<arg>admin</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230621 01:02:56.238" level="INFO">Typing text 'admin' into text field 'username'.</msg>
+<status status="PASS" starttime="20230621 01:02:56.235" endtime="20230621 01:02:59.357"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:56.233" endtime="20230621 01:02:59.358"/>
+</kw>
+<kw name="Input Password">
+<arg>123</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230621 01:02:59.365" level="INFO">Typing text '123' into text field 'password'.</msg>
+<status status="PASS" starttime="20230621 01:02:59.362" endtime="20230621 01:03:02.485"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:59.359" endtime="20230621 01:03:02.486"/>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=forecc</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230621 01:03:02.493" level="INFO">Clicking button 'id=forecc'.</msg>
+<status status="PASS" starttime="20230621 01:03:02.489" endtime="20230621 01:03:16.981"/>
+</kw>
+<status status="PASS" starttime="20230621 01:03:02.487" endtime="20230621 01:03:16.982"/>
+</kw>
+<kw name="Welcome Page Should Be Open">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Cloud Cover Nowcasting</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230621 01:03:16.987" endtime="20230621 01:03:18.111"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Cloud Cover Nowcasting</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230621 01:03:19.128" level="INFO">Page title is 'Cloud Cover Nowcasting'.</msg>
+<status status="PASS" starttime="20230621 01:03:18.112" endtime="20230621 01:03:19.128"/>
+</kw>
+<status status="PASS" starttime="20230621 01:03:16.984" endtime="20230621 01:03:19.129"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:56.230" endtime="20230621 01:03:19.132"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230621 01:03:19.137" endtime="20230621 01:03:22.255"/>
+</kw>
+<status status="PASS" starttime="20230621 01:02:10.362" endtime="20230621 01:03:22.256"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
